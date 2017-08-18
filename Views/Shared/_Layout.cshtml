@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!--Import ACE Materialize Framework-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.ace.local/ACE_Materialize/sass/ace-materialize.css" media="screen,projection" />
+    <link href="~/css/custom-css.css" rel="stylesheet" />
+    <!--Calendar-->
+    <link href="~/materialize/css/customcss.css" rel="stylesheet" />
+
+
+
+    
+    <title>@ViewBag.Title - SNAP</title>
+
+</head>
+<body>
+
+
+<header>
+    <!--Navbar-->
+    <div class="navbar-fixed">
+        <nav>
+
+            <div class="nav-wrapper light-red accent-4" >
+
+                <ul class="left">
+                    <li>
+                                        <img border="0" alt="AC" src="~/Assets/pic/AC_Electric_logo.png" width="100" height="100">                  
+                    </li>
+
+                    <li>
+
+                    </li>
+
+                </ul>
+
+                
+              
+                <ul class="right hide-on-med-and-down">
+
+                    
+                    <li><a href="#!"><i class="material-icons">apps</i></a></li>
+
+                    <li><a href="#!"><i class="material-icons">notifications</i></a></li>
+
+                    <li><a href="#!"><img class="circle-avatar-on-navbar" src="~/Assets/pic/profile.png"></a></li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
+</header>
+    <ul id="slide-out" class="side-nav fixed " data-collapsible="accordion">
+
+        <li id="slide-header" class="hide-on-large-only">
+
+            <nav>
+
+                <div class="nav-wrapper white">
+
+                    <ul id="nav-mobile" class="hide-on-large-only">
+
+                        <li style="float:right; vertical-align:middle;">
+
+                            <a href="#!" style="padding-left:0;">
+
+                                <img class="tiny circle-avatar-on-navbar" src="~/Assets/pic/profile.png" style=" margin:8px;">
+
+                            </a>
+
+                        </li>
+
+                        <li style="float:right; vertical-align:middle;">
+
+                            <a href="#!" style="padding-left:0;">
+                                <i class="tiny material-icons" style="margin:0 8px;">notifications</i>
+
+                            </a>
+
+                        </li>
+
+                        <li style="float:right; vertical-align:middle;">
+
+                            <a href="#!">
+
+                                <i class="tiny material-icons" style="margin:0 8px;">apps</i>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div>
+
+                <a href="contacts-page.html" class="grey-text" style="padding-right:0;">
+
+                    <img src="~/Assets/pic/profile.png" style="width:30%; height:30%;  vertical-align:middle;">
+
+                </a>
+
+                <a href="contacts-page.html" class="grey-text" style="padding-left:0; font-size:22px; vertical-align:middle;">
+
+                    Contacts
+
+                </a>
+
+
+
+            </div>
+
+        </li>
+
+        <li>
+            <a href="/Home/Index"><i class="material-icons">contacts</i>Contacts</a>
+
+
+        </li>
+
+        <li>
+
+            <a href="/Home/recentlyContacted"><i class="material-icons">replay</i>Recently accessed</a>
+
+
+        </li>
+
+        <li>
+
+            <a href="/Home/Groups"><i class="material-icons">events</i>Groups</a>
+
+
+        </li>
+
+        <li><div class="divider"></div></li>
+
+        <li class="black-text">
+
+            <div class="collapsible-header active">
+
+                <a href="#!" class="black-text"><i class="material-icons grey-text">keyboard_arrow_up</i>Labels</a>
+
+            </div>
+
+            <div class="collapsible-body">
+
+                <a href="#modal-for-create" class="modal-trigger black-text">
+
+                    <i class="material-icons grey-text" style="padding:0 16px; margin-top:16px;">add</i>
+
+                    Create Labels
+
+                </a>
+
+            </div>
+
+        </li>
+
+        <li>
+        <div class="divider"></div></li>
+
+        <li>
+
+            <div class="collapsible-header">
+
+                <a href="#!" class="black-text">
+
+                    <i class="material-icons grey-text">keyboard_arrow_down</i>
+
+                    More
+
+                </a>
+
+
+            </div>
+
+            <div class="collapsible-body" style="padding-left:32px;">
+
+                <ul class="black-text">
+
+                    <li>
+
+                        <a href="#modal-for-import">Import</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#modal-for-export">Export</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#modal-for-print">Print</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#modal-for-undo-changes">Undo Changes</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </li>
+
+        <li><div class="divider"></div></li>
+
+        <li>
+
+            <a href="#modal-for-settings"><i class="material-icons">settings</i>Settings</a>
+
+        </li>
+
+
+
+    </ul>
+<main>
+
+    @RenderBody()
+</main>
+
+<!--Scripts-->
+<script type="text/javascript" src="https://cdn.ace.local/ACE_JQuery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.ace.local/ACE_Materialize/materialize-src/js/materialize.js"></script>
+<script type="text/javascript" src="https://cdn.ace.local/ACE_Materialize/js/ace-materialize.js"></script>
+
+<!--Plugins-->
+<script type="text/javascript" src="https://cdn.ace.local/ACE_Plugins/ace-user-profiles.js"></script>
+<script src="~/Assets/js/custom-js.js"></script>
+<script src="~/Assets/js/materialize.js"></script>
+<script src="~/Assets/js/materialize.min.js"></script>
+    <!--Calendar-->
+<script src="~/materialize/js/customjs.js"></script>
+@RenderSection("scripts", required: false)
+</body>
+</html>

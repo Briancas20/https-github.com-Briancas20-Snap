@@ -1,0 +1,10 @@
+.row li {
+  margin: 18px 0;
+}
+
+.circle-order {
+  border-radius:50%;
+  display:inline-block;
+  width:20px;
+  height:20px;
+}
